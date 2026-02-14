@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: compass_ops_db
+    environment:
+      POSTGRES_USER: compass
+      POSTGRES_PASSWORD: compass
+      POSTGRES_DB: compass_ops
+    ports:
+      - "5432:5432"
+    volumes:
+      - compass_ops_pgdata:/var/lib/postgresql/data
+
+volumes:
+  compass_ops_pgdata:
