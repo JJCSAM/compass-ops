@@ -1,15 +1,21 @@
 {
-  "name": "compass-ops",
+  "name": "@compass-ops/api",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "pnpm -r dev",
-    "build": "pnpm -r build"
+  "dev:api": "pnpm --dir apps/api dev",
+  "dev": "pnpm dev:api"
+},
+  "dependencies": {
+    "@fastify/cors": "^10.1.0",
+    "@prisma/client": "6.19.2",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.2.0"
   },
   "devDependencies": {
-    "prisma": "^6.19.2"
-  },
-  "dependencies": {
-    "@prisma/client": "^6.19.2"
+    "@types/node": "^22.0.0",
+    "prisma": "6.19.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
   }
 }
