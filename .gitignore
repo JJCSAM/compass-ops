@@ -1,6 +1,17 @@
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
+# deps
+node_modules/
+
+# builds
+dist/
+build/
+out/
+.next/
+coverage/
+
+# env
+.env
+.env.*
+!.env.example
+
+# prisma generated
+prisma/build/
